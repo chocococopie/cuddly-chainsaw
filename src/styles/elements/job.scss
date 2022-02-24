@@ -1,0 +1,177 @@
+.job {
+
+	&__shadow {
+		background: linear-gradient(123.24deg, #F4F4F4 0%, #F0F0F0 100%);
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 3px;
+		margin-top: 40px;
+
+		@include for-tablet {
+			flex-direction: column;
+		}
+
+		@include for-mobile {
+			background: 0;
+			box-shadow: none;
+			margin-top: 20px;
+		}
+	}
+
+	&__form {
+		width: 74%;
+		padding: 40px 104px 40px 65px;
+
+		@include for-tablet-l {
+			padding-right: 65px;
+		}
+
+		@include for-tablet {
+			width: 100%;
+		}
+
+		@include for-mobile {
+			padding: 0;
+		}
+
+		&-title {
+			color: #5E95FF;
+			max-width: 410px;
+			padding-bottom: 40px;
+
+			@extend .fw-sb;
+
+			@include for-mobile {
+				padding-bottom: 0;
+			}
+		}
+
+		&-control {
+			margin-top: 56px;
+
+			@include for-tablet-l {
+				flex-direction: column-reverse;
+			}
+
+			@include for-mobile {
+				margin-top: 24px;
+				align-items: flex-start;
+			}
+
+			& .btn {
+				margin-right: 32px;
+
+				@include for-tablet-l {
+					margin-right: 0;
+					margin-top: 32px;
+				}
+
+				@include for-mobile {
+					margin-top: 24px;
+				}
+			}
+		}
+
+		& .input {
+
+			&__wrap {
+				width: calc(50% - 16px);
+				margin-top: 32px;
+
+				@include for-mobile {
+					width: 100%;
+					margin-top: 24px;
+				}
+
+				&.input__wrap--w-100 {
+
+					@extend .w-100;
+				}
+
+				&--mt0 {
+					margin-top: 0;
+				}
+
+				&.focused {
+
+					& .input {
+
+						& + label {
+							top: -2px;
+							font-size: 12px;
+							color: #5E95FF;
+						}
+					}
+				}
+			}
+		}
+
+		&-group {
+
+			@include for-mobile {
+				flex-direction: column;
+			}
+		}
+	}
+
+	&__contacts {
+		width: 26%;
+		padding-top: 40px;
+		padding-left: 40px;
+		padding-right: 26px;
+		color: #FFFFFF;
+		background-image: linear-gradient(90deg, #64B9FF 0%, #5E95FF 100%);
+		border-radius: 0px 3px 3px 0px;
+
+		@include for-tablet {
+			width: 100%;
+			padding-bottom: 40px;
+		}
+
+		@include for-mobile {
+			display: none;
+		}
+
+		&-item {
+
+			@extend .flex;
+			@extend .flex-col;
+			@extend .align-start;
+
+			margin-top: 32px;
+
+			& > a {
+				text-decoration: none;
+				color: #FFFFFF;
+				margin-top: 4px;
+
+				@extend .fw-sb;
+			}
+		}
+
+		&-social {
+			margin-top: 40px;
+
+			& > a {
+				text-decoration: none;
+				margin-right: 24px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				@extend .flex;
+				@extend .just-center;
+				@extend .align-center;
+			}
+		}
+		&--card {
+			width: 26%;
+			background-image: url("img/pics/card.png");
+			border-radius: 0px 3px 3px 0px;
+
+			@include for-tablet {
+				display: none;
+			}
+		}
+	}
+}

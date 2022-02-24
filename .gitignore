@@ -1,0 +1,9 @@
+/dist/
+/.idea/
+/node_modules/
+
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+.vscode

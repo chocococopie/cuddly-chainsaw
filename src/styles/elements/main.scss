@@ -1,0 +1,98 @@
+.main {
+
+	&__banner {
+		height: 600px;
+		background: url('./img/header/bg-at.png'), linear-gradient(180deg, #F5FBFF 0%, rgba(255, 255, 255, 0) 100%), #D2E6F1;
+		background-repeat: no-repeat;
+		background-position: center;
+
+		@include for-tablet {
+			height: 560px;
+		}
+
+		@include for-mobile {
+			height: 379px;
+			background-size: contain;
+			background-position: right;
+		}
+
+		&-container {
+			padding-right: 0;
+
+			@extend .h-100;
+
+			@include for-tablet-l {
+				padding-right: 0;
+			}
+
+			@include for-tablet {
+				padding-right: 0;
+			}
+		}
+
+		&-img {
+
+			@include for-tablet {
+				position: relative;
+				width: 100%;
+				overflow: hidden;
+			}
+
+			@include for-mobile {
+				display: none;
+			}
+
+			& > img {
+
+				@include for-tablet {
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					max-width: none;
+				}
+			}
+		}
+	}
+
+	&__text {
+		padding-top: 80px;
+		max-width: 570px;
+
+		@include for-tablet-l {
+			max-width: 440px;
+		}
+
+		@include for-tablet {
+			padding-top: 40px;
+		}
+
+		& .btn {
+			margin-top: 120px;
+
+			@include for-tablet {
+				margin-top: 60px;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 44px;
+		line-height: 1.2;
+		text-transform: uppercase;
+
+		@include for-mobile {
+			font-size: 24px;
+			text-transform: none;
+		}
+	}
+
+	&__subtitle {
+		margin-top: 32px;
+		max-width: 380px;
+
+		@include for-mobile {
+			max-width: none;
+		}
+	}
+}

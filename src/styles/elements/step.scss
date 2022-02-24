@@ -1,0 +1,84 @@
+.step {
+	
+	@include for-mobile {
+		background: #FFFFFF;
+		padding-top: 0;
+	}
+
+	&__subtitle {
+		margin-top: 32px;
+	}
+
+	&__list {
+		padding-top: 32px;
+		margin-top: -24px;
+		margin-right: -32px;
+
+		@include for-tablet-l {
+			margin-right: 0;
+		}
+
+		&-part {
+			width: calc(33.333% - 32px);
+			margin-right: 32px;
+
+			@include for-tablet-l {
+				width: 100%;
+				margin-right: 0;
+				display: flex;
+				align-items: stretch;
+				flex-wrap: wrap;
+			}
+
+			@include for-mobile {
+				flex-direction: column;
+				background-image: linear-gradient(123.24deg, #F4F4F4 0%, #F0F0F0 100%);
+				border-radius: 3px;
+				padding-bottom: 10px;
+				padding-left: 10px;
+				padding-right: 8px;
+			}
+		}
+	}
+
+	&__item {
+		background-image: linear-gradient(90deg, #FFFFFF 34.94%, rgba(255, 255, 255, 0) 100%);
+		border-radius: 154px;
+		padding: 8px;
+		margin-top: 24px;
+
+		@extend .flex;
+		@extend .align-center;
+
+		@include for-tablet-l {
+			margin-right: 16px;
+			width: calc(50% - 16px);
+		}
+
+		@include for-mobile {
+			margin-right: 0;
+			width: 100%;
+			margin-top: 16px;
+		}
+
+		&-count {
+			color: #F0F0F0;
+			background-image: linear-gradient(90deg, #64B9FF 0%, #5E95FF 100%);
+			border-radius: 50%;
+			width: 41px;
+			height: 41px;
+			flex-shrink: 0;
+			margin-right: 16px;
+			margin-bottom: auto;
+			line-height: 1;
+
+			@extend .flex;
+			@extend .just-center;
+			@extend .align-center;
+
+			@include for-mobile {
+				margin-right: 8px;
+			}
+		}
+	}
+}

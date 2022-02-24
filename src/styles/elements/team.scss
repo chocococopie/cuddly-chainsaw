@@ -1,0 +1,170 @@
+.team {
+
+	&__subtitle {
+		margin-top: 32px;
+	}
+
+	&__list {
+		margin-top: 40px;
+
+		@include for-tablet {
+			flex-direction: column;
+		}
+
+		@include for-mobile {
+			display: none;
+		}
+	}
+
+	&__item {
+		width: calc(50% - 16px);
+
+		@include for-tablet {
+			width: 100%;
+			align-items: flex-start;
+
+			&:not(:first-child) {
+				margin-top: 32px;
+			}
+		}
+
+		&-img {
+			@extend .flex;
+			@extend .align-center;
+			@extend .just-center;
+		}
+
+		& h4 {
+			margin-top: 12px;
+
+			@extend .fw-sb;
+		}
+
+		&-bio {
+			margin-top: 12px;
+			color: #B8B8B8;
+		}
+
+		&-citate {
+			margin-left: 32px;
+			max-width: 255px;
+
+			@include for-tablet {
+				max-width: 50%;
+			}
+		}
+	}
+
+	&__master {
+		margin-top: 40px;
+
+		&-title {
+			font-size: 24px;
+
+			@extend .fw-sb;
+		}
+
+		&-list {
+			margin: 0;
+			padding: 0;
+			padding-top: 32px;
+			margin-top: -24px;
+			margin-right: -32px;
+
+			@include for-mobile {
+				padding-top: 16px;
+				margin-top: -16px;
+				margin-right: -16px;
+			}
+		}
+
+		&-item {
+			padding: 8px 32px 8px 12px;
+			background-image: linear-gradient(90deg, #FFFFFF 56.76%, rgba(255, 255, 255, 0) 100%);
+			border-radius: 58px;
+			list-style-type: none;
+			width: calc(20% - 32px);
+			margin-top: 24px;
+			margin-right: 32px;
+
+			@extend .flex;
+			@extend .align-center;
+
+			@include for-tablet-l {
+				width: calc(25% - 32px);
+			}
+
+			@include for-tablet {
+				width: calc(33.333% - 32px);
+			}
+
+			@include for-mobile {
+				margin-top: 16px;
+				margin-right: 16px;
+				width: calc(50% - 16px);
+				padding: 0;
+				background: 0;
+			}
+
+			&:before {
+				content: '';
+				width: 6px;
+				height: 6px;
+				background-image: linear-gradient(90deg, #64B9FF 0%, #5E95FF 100%);
+				box-shadow: 1px 1px 4px rgba(94, 151, 255, 0.35);
+				border-radius: 50%;
+				margin-right: 12px;
+				flex-shrink: 0;
+
+				@include for-mobile {
+					margin-right: 8px;
+				}
+			}
+		}
+	}
+}
+
+
+.asdf {
+	background-color: #5caaea;
+
+	& .div {
+		background-color: red;
+	}
+
+	& ul {
+		display: flex;
+
+		& li {
+			display: flex;
+			align-items: center;
+
+			& .div {
+				background-color: green;
+
+				&.div--ccc {
+					background-color: #ccc;
+				}
+
+				& span {
+					color: red;
+				}
+
+				& > span {
+					text-transform: uppercase;
+					color: black;
+				}
+			}
+
+			& + li {
+				&:before {
+					content: '-';
+					display: inline-block;
+					margin-left: 16px;
+					margin-right: 16px;
+					font-size: 32px;
+				}
+			}
+		}
+	}
+}

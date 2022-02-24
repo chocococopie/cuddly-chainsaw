@@ -1,0 +1,73 @@
+.burger {
+
+	&__button {
+		display: none;
+
+		@include for-mobile {
+			border: 0;
+			background: 0;
+			padding: 0;
+			margin: 0;
+			cursor: pointer;
+			width: 30px;
+			height: 14px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+
+			& span {
+				background-image: linear-gradient(90deg, #64B9FF 0%, #5E95FF 100%);
+				border-radius: 1px;
+				width: 26px;
+				height: 2px;
+				display: block;
+				position: relative;
+				transition: width 0.3s ease;
+
+				&:before,
+				&:after {
+					content: '';
+					height: 2px;
+					background-image: linear-gradient(90deg, #64B9FF 0%, #5E95FF 100%);
+					border-radius: 1px;
+					display: block;
+					position: absolute;
+					transition: all 0.3s ease;
+				}
+
+				&:before {
+					width: 22px;
+					top: -5px;
+					right: 0;
+				}
+
+				&:after {
+					width: 30px;
+					bottom: -5px;
+					right: 0;
+				}
+			}
+
+			&.isActive {
+
+				& span {
+					width: 0;
+
+					&:before,
+					&:after {
+						width: 26px;
+						top: 50%;
+					}
+
+					&:before {
+						transform: rotate(135deg);
+					}
+
+					&:after {
+						transform: rotate(-135deg);
+					}
+				}
+			}
+		}
+	}
+}

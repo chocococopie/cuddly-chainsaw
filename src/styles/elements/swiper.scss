@@ -1,0 +1,55 @@
+@import "/node_modules/swiper/swiper-bundle.css";
+
+.swiper {
+
+	&-pagination-bullet-active {
+		background-image: linear-gradient(-90deg, #64B9FF 0%, #5E95FF 100%);
+		width: 10px;
+		height: 10px;
+		vertical-align: middle;
+	}
+
+	&-container {
+		width: 100%;
+		padding-top: 30px;
+		padding-bottom: 20px;
+	}
+
+	&-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+		bottom: 0;
+	}
+
+	&-slide {
+
+		& img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+
+.featuresSwiper.swiper-container.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+	bottom: 30px;
+
+	@include for-mobile {
+		bottom: 0;
+	}
+}
+
+.serviceSwiper.swiper-container {
+
+	& .swiper-slide {
+		& > h3,
+		& > .btn {
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
+
+		&-active {
+			& > h3,
+			& > .btn {
+				opacity: 1;
+			}
+		}
+	}
+}

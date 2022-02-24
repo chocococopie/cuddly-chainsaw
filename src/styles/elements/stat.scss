@@ -1,0 +1,33 @@
+.stat {
+
+	&__list {
+
+		@include for-mobile {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__item {
+		max-width: 160px;
+
+		@extend .flex;
+		@extend .flex-col;
+		@extend .align-start;
+
+		@include for-mobile {
+			max-width: none;
+			width: calc(50% - 22px);
+		}
+
+		&-count {
+			font-size: 72px;
+			color: #5E95FF;
+
+			@extend .fw-sb;
+
+			@include for-mobile {
+				font-size: 54px;
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+.features {
+	padding-top: 0;
+	padding-bottom: 20px;
+
+	@include for-mobile {
+		padding-top: 0;
+	}
+
+	& .title {
+		padding-bottom: 40px;
+
+		@include for-mobile {
+			padding-bottom: 0;
+		}
+	}
+
+	& .tns-nav {
+		@extend .flex;
+		@extend .align-center;
+		@extend .just-center;
+
+		margin-top: -40px;
+		z-index: 1;
+		position: relative;
+
+		& button {
+			width: 8px;
+			height: 8px;
+			border: 0;
+			background: 0;
+			padding: 0;
+			background-color: #B8B8B8;
+			margin: 0 6px;
+			border-radius: 50%;
+
+			@extend .transition;
+
+			&.tns-nav-active {
+				width: 12px;
+				height: 12px;
+				margin-left: 5px;
+				margin-right: 5px;
+				background-image: linear-gradient(90deg, #64B9FF 0%, #5E95FF 100%);
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+.slider {
+
+	&__item {
+		background-image: linear-gradient(123.24deg, #F4F4F4 0%, #F0F0F0 100%);
+		border-radius: 3px;
+		padding: 32px;
+		height: 300px;
+
+		@include for-mobile {
+			background-image: linear-gradient(90deg, #64B9FF 0%, #5E95FF 100%);
+			padding: 16px 16px 24px;
+			height: auto;
+			//min-height: 290px;
+			color: #FFFFFF;
+		}
+
+		& h3 {
+			font-size: 24px;
+
+			@extend .fw-sb;
+
+			@include for-mobile {
+				font-size: 15px;
+			}
+		}
+
+		& ul {
+			padding: 0;
+			margin: 0;
+			margin-top: 24px;
+
+			@include for-mobile {
+				margin-top: 16px;
+			}
+
+			& li {
+				list-style-position: inside;
+				margin-top: 8px;
+
+				@include for-mobile {
+					list-style-position: outside;
+					margin-left: 16px;
+				}
+			}
+		}
+	}
+}

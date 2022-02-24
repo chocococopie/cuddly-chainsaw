@@ -1,0 +1,49 @@
+{
+  "name": "savage",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "@babel/core": "^7.11.6",
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-commonjs": "latest",
+    "@rollup/plugin-node-resolve": "latest",
+    "@rollup/stream": "latest",
+    "jquery": "^3.6.0",
+    "mozjpeg": "^7.0.0",
+    "optipng-bin": "^7.0.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "select2": "^4.1.0-rc.0",
+    "swiper": "^6.8.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-file-include": "^2.2.2",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^3.0.0",
+    "gulp-uglify-es": "^2.0.0",
+    "rollup": "^2.28.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "sass": "^1.37.0",
+    "vinyl-buffer": "^1.0.1"
+  },
+  "scripts": {
+    "serve": "gulp",
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

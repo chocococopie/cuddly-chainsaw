@@ -1,0 +1,70 @@
+.nav {
+
+	@include for-mobile {
+		padding: 24px;
+	}
+
+	&__link {
+		margin-right: 70px;
+		text-decoration: none;
+		color: #383838;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		position: relative;
+
+		@extend .transition;
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 0;
+			right: 0;
+			height: 2px;
+			background-color: #383838;
+
+			@extend .transition;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover {
+			color: #101010;
+
+			&:after {
+				left: 0;
+				right: auto;
+				width: 100%;
+			}
+		}
+
+		@include for-tablet-l {
+			margin-right: 48px;
+		}
+
+		@include for-tablet {
+			margin-right: 24px;
+		}
+
+		@include for-mobile {
+			margin-right: 0;
+			width: 100%;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 15px;
+
+			&:hover {
+				&:after {
+					width: 0;
+				}
+			}
+
+			&:active {
+				transform: translateY(2px);
+				opacity: 0.8;
+			}
+		}
+	}
+}

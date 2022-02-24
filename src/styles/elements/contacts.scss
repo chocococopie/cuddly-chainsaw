@@ -1,0 +1,62 @@
+.contacts {
+
+  & .job__form {
+    padding: 0;
+  }
+
+  & .job__contacts {
+
+    @include for-mobile {
+      color: #64B9FF;
+      background-image: none;
+      display: block;
+      padding-left: 0;
+      padding-top: 0;
+      font-size: 15px;
+    }
+
+    &-title {
+      @include for-mobile {
+        display: none;
+      }
+    }
+
+    &-item a {
+      @include for-mobile {
+        color: black;
+      }
+    }
+  }
+
+  & .job__shadow {
+
+    @include for-tablet {
+      flex-direction: column;
+    }
+
+    @include for-mobile {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__map {
+    height: 513px;
+
+    @include for-tablet-l {
+      padding-right: 65px;
+      height: 500px;
+    }
+
+    @include for-tablet {
+      height: 400px;
+    }
+
+    @include for-mobile {
+      height: 352px;
+    }
+
+    & div {
+      height: 100%;
+    }
+  }
+}

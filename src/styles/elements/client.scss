@@ -1,0 +1,37 @@
+.client {
+
+	&__list {
+		padding-top: 40px;
+		margin-top: -16px;
+		margin-right: -24px;
+	}
+
+	&__item {
+		width: calc(100% / 6 - 24px);
+		margin-right: 24px;
+		margin-top: 16px;
+		filter: grayscale(1);
+		height: 114px;
+		opacity: 0.6;
+
+		@extend .transition;
+		@extend .flex;
+		@extend .align-center;
+		@extend .just-center;
+
+		@include for-mobile {
+			width: calc(33.333% - 24px);
+			filter: grayscale(0);
+			opacity: 1;
+		}
+
+		&:hover {
+			filter: grayscale(0);
+			opacity: 1;
+		}
+
+		& img {
+			max-height: 100%;
+		}
+	}
+}

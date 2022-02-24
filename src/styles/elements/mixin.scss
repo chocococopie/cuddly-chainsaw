@@ -1,0 +1,52 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("./fonts/#{$file_name}.woff") format("woff"), url("./fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+};
+
+@mixin gradientAnimation( $start, $end, $transTime ){
+	background-size: 100%;
+	background-image: linear-gradient($start, $end);
+	position: relative;
+	z-index: 100;
+	&:before {
+		background-image: linear-gradient($end, $start);
+		content: "";
+		display: block;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		width: 100%;
+		z-index: -100;
+		transition: opacity $transTime;
+	}
+	&:hover {
+		&:before {
+			opacity: 1;
+		}
+	}
+}
+
+@mixin for-tablet-l {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin for-tablet {
+	@media (max-width: 991px) {
+		@content;
+	}
+}
+
+@mixin for-mobile {
+	@media (max-width: 767px) {
+		@content;
+	}
+}
